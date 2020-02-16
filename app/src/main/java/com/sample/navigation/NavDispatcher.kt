@@ -3,6 +3,10 @@ package com.sample.navigation
 import android.view.View
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commitNow
+import com.sample.MainActivity
+import com.sample.utils.SafeLiveData
+import com.sample.utils.extensions.removeOldFragments
+import com.sample.utils.extensions.swap
 import kotlinx.coroutines.*
 import kotlin.coroutines.resume
 
