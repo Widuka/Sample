@@ -66,3 +66,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
 }
+
+localization {
+    xlsFileURI = 'https://docs.google.com/spreadsheets/d/1FTibFkkjAfep45gpL5RpSmL0RSbAX2aTBswtiSmSbXI/export?format=xlsx'
+    handleEmptyTranslationsAsDefault = true
+    outputIndent = "    "
+}
