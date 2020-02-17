@@ -3,5 +3,6 @@
     <dimen name="textSizeNormal">16sp</dimen>
     <dimen name="textSizeLogo">32sp</dimen>
     <dimen name="paddingDefault">16dp</dimen>
+    <dimen name="marginDefault">16dp</dimen>
     <dimen name="buttonCornerRadius">10dp</dimen>
 </resources>

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <string name="app_name">Sample</string>
+    <string name="doctor">Lekarzem</string>
+    <string name="patient">Pacjentem</string>
+    <string name="landing_header">Jestem:</string>
 </resources>
