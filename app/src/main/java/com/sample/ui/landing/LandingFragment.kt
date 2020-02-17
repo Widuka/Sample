@@ -10,10 +10,6 @@ class LandingFragment : BaseFragment() {
     override val layoutRes: Int = R.layout.fragment_landing
     override val viewModel: LandingViewModel by viewModel()
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
     companion object {
         fun creator(): () -> LandingFragment = ::LandingFragment
     }

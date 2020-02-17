@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 class SplashViewModel(
     backgroundDispatcher: CoroutineDispatcher,
     private val navDispatcher: NavDispatcher
-) : BaseViewModel(backgroundDispatcher){
+) : BaseViewModel(backgroundDispatcher) {
     fun openUserSelectFragment() = launch {
         delay(SPLASH_DURATION)
         navDispatcher.navigate(NavRequest.Main.Landing)

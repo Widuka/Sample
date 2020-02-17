@@ -4,4 +4,9 @@
         <item name="android:textSize">@dimen/textSizeNormal</item>
         <item name="android:textColor">@color/textDarkColor</item>
     </style>
+
+    <style name="SplashText" parent="Text">
+        <item name="android:drawableTop">@drawable/ic_logo</item>
+        <item name="android:textSize">@dimen/textSizeLogo</item>
+    </style>
 </resources>
