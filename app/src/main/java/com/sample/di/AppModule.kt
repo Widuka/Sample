@@ -2,6 +2,9 @@ package com.sample.di
 
 import com.sample.MainViewModel
 import com.sample.SampleApp
+import com.sample.api.ApiFactory
+import com.sample.api.ApiRepository
+import com.sample.api.RetrofitInterceptor
 import com.sample.database.SampleDatabase
 import com.sample.database.repository.PatientRepository
 import com.sample.navigation.NavDispatcher
@@ -21,7 +24,7 @@ fun SampleApp.startKoin() {
     startKoin {
         androidLogger()
         androidContext(this@startKoin)
-        modules(listOf(appModule, databaseModule))
+        modules(listOf(appModule, databaseModule, backendModule))
     }
 }
 
@@ -39,4 +42,10 @@ val databaseModule = module {
     single { SampleDatabase.invoke(androidContext()) }
     single { get<SampleDatabase>().patientDao() }
     single { PatientRepository(get()) }
+}
+
+val backendModule = module {
+    single<RetrofitInterceptor>()
+    single<ApiFactory>()
+    single { ApiRepository(get()) }
 }
