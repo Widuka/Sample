@@ -2,6 +2,8 @@ package com.sample.di
 
 import com.sample.MainViewModel
 import com.sample.SampleApp
+import com.sample.database.SampleDatabase
+import com.sample.database.repository.PatientRepository
 import com.sample.navigation.NavDispatcher
 import com.sample.ui.doctorlogin.DoctorLogInViewModel
 import com.sample.ui.landing.LandingViewModel
@@ -19,7 +21,7 @@ fun SampleApp.startKoin() {
     startKoin {
         androidLogger()
         androidContext(this@startKoin)
-        modules(listOf(appModule))
+        modules(listOf(appModule, databaseModule))
     }
 }
 
@@ -31,4 +33,10 @@ val appModule = module {
     viewModel<LandingViewModel>()
     viewModel<PatientSelectViewModel>()
     viewModel<DoctorLogInViewModel>()
+}
+
+val databaseModule = module {
+    single { SampleDatabase.invoke(androidContext()) }
+    single { get<SampleDatabase>().patientDao() }
+    single { PatientRepository(get()) }
 }
