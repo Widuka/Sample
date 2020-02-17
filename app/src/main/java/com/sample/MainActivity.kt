@@ -1,7 +1,7 @@
 package com.sample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.sample.ui.BaseFragment
 import com.sample.utils.extensions.observe
 import kotlinx.coroutines.CoroutineScope
@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         observeNavigationChanges()
+        viewModel.openSplashScreen()
     }
 
     private fun observeNavigationChanges() {

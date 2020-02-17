@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#376b8c</color>
+    <color name="colorPrimaryDark">#1B6796</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorOnPrimary">#123456</color>
+    <color name="colorOnSurface">#547321</color>
+    <color name="colorOnSecondary">#444442</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSecondaryBackground">#1FCDDD</color>
+    <color name="statusBarColor">#4DC931</color>
+    <color name="textDarkColor">#4D504D</color>
+    <color name="textGrayColor">#707070</color>
+    <color name="textLightColor">#FFFFFF</color>
+    <color name="dividerColor">#c7c7ccff</color>
+    <color name="progressBackground">#993E779B</color>
+    <color name="buttonLightBackground">#BB3e779b</color>
+    <color name="tooltipBackground">#91b1c6</color>
 </resources>
