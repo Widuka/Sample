@@ -3,7 +3,9 @@ package com.sample.di
 import com.sample.MainViewModel
 import com.sample.SampleApp
 import com.sample.navigation.NavDispatcher
+import com.sample.ui.doctorlogin.DoctorLogInViewModel
 import com.sample.ui.landing.LandingViewModel
+import com.sample.ui.patientselect.PatientSelectViewModel
 import com.sample.ui.splash.SplashViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.experimental.dsl.viewModel
@@ -27,4 +29,6 @@ val appModule = module {
     viewModel<MainViewModel>()
     viewModel<SplashViewModel>()
     viewModel<LandingViewModel>()
+    viewModel<PatientSelectViewModel>()
+    viewModel<DoctorLogInViewModel>()
 }

@@ -13,5 +13,7 @@ sealed class NavRequest {
 
         object Splash : Main("splash")
         object Landing : Main("landing")
+        object PatientSelect : Main("patientSelect")
+        object DoctorLogIn : Main("doctorLogIn")
     }
 }
