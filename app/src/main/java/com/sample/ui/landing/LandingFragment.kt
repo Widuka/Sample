@@ -1,4 +1,4 @@
-package com.sample.ui.splash
+package com.sample.ui.landing
 
 import android.os.Bundle
 import android.view.View
@@ -6,16 +6,15 @@ import com.sample.R
 import com.sample.ui.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class SplashFragment : BaseFragment() {
-    override val layoutRes = R.layout.fragment_splash
-    override val viewModel: SplashViewModel by viewModel()
+class LandingFragment : BaseFragment() {
+    override val layoutRes: Int = R.layout.fragment_landing
+    override val viewModel: LandingViewModel by viewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.openUserSelectFragment()
     }
 
     companion object {
-        fun creator(): () -> SplashFragment = ::SplashFragment
+        fun creator(): () -> LandingFragment = ::LandingFragment
     }
 }

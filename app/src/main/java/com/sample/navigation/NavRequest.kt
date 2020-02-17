@@ -12,5 +12,6 @@ sealed class NavRequest {
         override val containerId = R.id.container
 
         object Splash : Main("splash")
+        object Landing : Main("landing")
     }
 }
