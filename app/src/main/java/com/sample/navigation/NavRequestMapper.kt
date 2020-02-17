@@ -16,7 +16,7 @@ fun NavRequest.Main.toFragmentCreator(): () -> BaseFragment {
     return when (this) {
         NavRequest.Main.Splash -> SplashFragment.creator()
         NavRequest.Main.Landing -> LandingFragment.creator()
-        NavRequest.Main.PatientSelect -> PatientSelectFragment.creator()
+        is NavRequest.Main.PatientSelect -> PatientSelectFragment.creator(doctorsPatients)
         NavRequest.Main.DoctorLogIn -> DoctorLogInFragment.creator()
     }
 }

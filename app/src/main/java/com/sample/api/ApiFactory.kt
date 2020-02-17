@@ -9,7 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
-class ApiFactory: KoinComponent {
+class ApiFactory : KoinComponent {
     private val interceptor: RetrofitInterceptor by inject()
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = if (BuildConfig.DEBUG) {
@@ -19,7 +19,7 @@ class ApiFactory: KoinComponent {
         }
     }
 
-    private val baseUrl =         "https://abc.sample.com/api/v1/"
+    private val baseUrl = "https://abc.sample.com/api/v1/"
 
     fun createApi(): SampleApi = Retrofit.Builder()
         .baseUrl(baseUrl)
