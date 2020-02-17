@@ -15,6 +15,6 @@ class LandingViewModel(
     }
 
     fun openPatientSelectFragment() = launch {
-        navDispatcher.navigate(NavRequest.Main.PatientSelect)
+        navDispatcher.navigate(NavRequest.Main.PatientSelect())
     }
 }

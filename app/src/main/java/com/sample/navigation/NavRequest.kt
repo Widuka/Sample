@@ -1,6 +1,7 @@
 package com.sample.navigation
 
 import com.sample.R
+import com.sample.model.Patient
 
 sealed class NavRequest {
     abstract val tag: String
@@ -13,7 +14,7 @@ sealed class NavRequest {
 
         object Splash : Main("splash")
         object Landing : Main("landing")
-        object PatientSelect : Main("patientSelect")
+        data class PatientSelect(val doctorsPatients: List<Patient>? = null) : Main("patientSelect")
         object DoctorLogIn : Main("doctorLogIn")
     }
 }
